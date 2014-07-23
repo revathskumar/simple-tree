@@ -19,6 +19,8 @@ gulp.task('styles', function () {
         .pipe($.size());
 });
 
+
+
 gulp.task('coffee', function () {
     return gulp.src('src/*.coffee')
         .pipe($.coffee()).on('error', gutil.log)
@@ -106,7 +108,12 @@ gulp.task('connect', function () {
         });
 });
 
-gulp.task('serve', ['connect', 'coffee', 'styles'], function () {
+gulp.task('assets', function (){
+    return gulp.src('bower_components/jquery/dist/jquery.js')
+        .pipe(gulp.dest('scripts'));
+});
+
+gulp.task('serve', ['connect', 'coffee', 'styles', 'assets'], function () {
     require('opn')('http://localhost:9000');
 });
 
