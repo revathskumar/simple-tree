@@ -1,0 +1,118 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Simple Tree</title>
+        <meta name="description" content="Simple JavaScript Tree">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css main.css -->
+        <link rel="stylesheet" href="main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <h3 class="text-muted">Simple Tree</h3>
+            </div>
+
+            <div class="tree-data">
+              <ul class="">
+                <li>
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <a href="#">Bicycles &amp; Accessories</a>
+                  <ul style="display: none;" class="no-child">
+                    <li>
+                      <span class="glyphicon glyphicon glyphicon-certificate"></span>
+                      <a href="#">Kids Cycles</a>
+                    </li>
+                  </ul>
+                  <ul style="display: none;" class="no-child">
+                    <li>
+                      <span class="glyphicon glyphicon glyphicon-certificate"></span>
+                      <a href="#">Hybrid Bikes</a>
+                    </li>
+                  </ul>
+                  <ul style="display: none;" class="no-child">
+                    <li>
+                      <span class="glyphicon glyphicon glyphicon-certificate"></span>
+                      <a href="#">Roadsters &amp; SLRs</a>
+                    </li>
+                  </ul>
+                  <ul style="display: none;" class="no-child">
+                    <li>
+                      <span class="glyphicon glyphicon glyphicon-certificate"></span>
+                      <a href="#">Mountain Bikes (MTB)</a>
+                    </li>
+                  </ul>
+                  <ul style="display: none;" class="no-child">
+                    <li>
+                      <span class="glyphicon glyphicon glyphicon-certificate"></span>
+                      <a href="#">Road Bikes</a>
+                    </li>
+                  </ul>
+                  <ul style="display: none;" class="no-child">
+                    <li>
+                      <span class="glyphicon glyphicon glyphicon-certificate"></span>
+                      <a href="#">Speciality Bikes</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="">
+                <li>
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <a href="#">Cameras &amp; Accessories</a>
+                  <ul style="display: none;" class="no-child">
+                    <li>
+                      <span class="glyphicon glyphicon glyphicon-certificate"></span>
+                      <a href="#">Camcorder</a>
+                    </li>
+                  </ul>
+                  <ul style="display: none;" class="no-child">
+                    <li>
+                      <span class="glyphicon glyphicon glyphicon-certificate"></span>
+                      <a href="#">Point &amp; Shoot</a>
+                    </li>
+                  </ul>
+                  <ul style="display: none;" class="no-child">
+                    <li>
+                      <span class="glyphicon glyphicon glyphicon-certificate"></span>
+                      <a href="#">Smart Cameras</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer">
+                <p>♥ from the Yeoman team</p>
+            </div>
+        </div>
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        <script src="tree.js" type="text/javascript" charset="utf-8" async defer></script>
+        <script>
+          jQuery(function($){
+            category_tree = new Tree({el: $('.container')});
+          });
+        </script>
+    </body>
+</html>
