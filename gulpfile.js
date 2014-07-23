@@ -74,7 +74,7 @@ gulp.task('fonts', function () {
     return $.bowerFiles()
         .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
         .pipe($.flatten())
-        .pipe(gulp.dest('dist/fonts'))
+        .pipe(gulp.dest('assets/fonts'))
         .pipe($.size());
 });
 
@@ -108,9 +108,9 @@ gulp.task('connect', function () {
         });
 });
 
-gulp.task('assets', function (){
+gulp.task('assets', ['fonts'], function (){
     return gulp.src('bower_components/jquery/dist/jquery.js')
-        .pipe(gulp.dest('scripts'));
+        .pipe(gulp.dest('assets/scripts'));
 });
 
 gulp.task('serve', ['connect', 'coffee', 'styles', 'assets'], function () {
